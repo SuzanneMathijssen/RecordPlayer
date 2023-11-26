@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #EEE0B3;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 100px;
+}
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.closet {
+    position: relative;
+    width: 200px;
+    height: 250px;
+    margin-left: 200px;
+    margin-top: 165px;
+    background-color: #5c3b11;
+    border: 10px solid #b0712d;
+    box-shadow:inset -5px 5px 25px rgba(0,0,0,0.5);
+    transform-style: preserve-3d;
+    transform: perspective(2500px);
+    cursor: pointer;
+}
+
+.closet:before{
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 10px;
+    background-color: #8a5924;
+    top: 260px;
+    border-radius: 0 0 5px 5px;
+    box-shadow: 180px 0 #8a5924;
+}
+
+.closet:after{
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 220px;
+    border-bottom: 15px solid transparent;
+    border-top: 15px solid #8a5924;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    top: -25px;
+    left: -15px;
+
+}
+
+.shelves{
+    position: absolute;
+    width: 200px;
+    height: 8px;
+    top: 76px;
+    box-shadow: 0 108px #8a5924, 0 9px #8a5924;
+}
+
+.records{
+    display: flex;
+    flex-flow: wrap;
+    width: 200px;
+    height: 100px;
+}
+
+img{
+    height: 100px;
+}
+
+
+.player {
+    background-color: #1ab0a6;
+    width: 330px;
+    height: 190px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    box-shadow: 0 8px 0 0 #11706a;
+}
+
+.record {
+    height: 175px;
+    width: 175px;
+    background-color: #181312;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.playing:before,
+.playing:after {
+    position: absolute;
+    content: "";
+    border: 5px solid transparent;
+    border-top-color: #2c2424;
+    border-bottom-color: #2c2424;
+    border-radius: 50%;
+}
+
+.playing:before {
+    height: 135px;
+    width: 135px;
+}
+
+.playing:after {
+    height: 95px;
+    width: 95px;
+}
+
+.label {
+    background-color: #181312;
+    height: 15px;
+    width: 15px;
+    border: 20px solid #181312;
+    border-radius: 50%;
+}
+
+.tone-arm{
+    height: 90px;
+    width: 6px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 25px;
+    right: 95px;
+    transition: 1s;
+    transform-origin: top;
+}
+
+.control{
+    background-color: #181312;
+    height: 17px;
+    width: 17px;
+    border: 10px solid #2c2424;
+    border-radius: 50%;
+    position: absolute;
+    top: -16px;
+    left: -16px;
+}
+
+.tone-arm:before{
+    content: "";
+    height: 40px;
+    width: 6px;
+    background-color: #ffffff;
+    position: absolute;
+    transform: rotate(30deg);
+    bottom: -36px;
+    right: 10px;
+}
+
+.tone-arm:after {
+    content: "";
+    position: absolute;
+    height: 0;
+    width: 10px;
+    border-top: 18px solid #b2aea6;
+    border-left: 2px solid transparent;
+    border-right: 2px solid transparent;
+    top: 108px;
+    right: 12.5px;
+    transform: rotate(30deg);
+}
+
+.btn {
+    height: 28px;
+    width: 28px;
+    background-color: #24F0E2;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    border: none;
+    border: 3.5px solid #11706a;
+    outline: none;
+    cursor: pointer;
+}
+
+.slider{
+    -webkit-appearance: none;
+    appearance: none;
+    transform: rotate(-90deg);
+    width: 90px;
+    height: 7px;
+    position: absolute;
+    left: 233px;
+    top: 60px;
+    background-color: #11706a;
+    outline: none;
+    border-radius: 3px;
+    border: 6px solid #24F0E2;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 12px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+.play{
+    transform: rotate(30deg);
+    transform-origin: top;
+    transition: 1s;
+}
+
+.on{
+    animation: spin 3s 1s linear infinite;
+}
+
+@keyframes spin{
+    100% {
+        transform: rotate(360deg);
+    }
+}

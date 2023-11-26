@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Record Player</title>
+    <link href="./css/style.css" rel="stylesheet">
+</head>
+<body>
+    <h1>Wanna listen to some music?</h1>
+    <h2>Currently playing:</h2>
+    <div class="closet">
+        <div class="shelves"></div>
+        <div class="records">
+            <img id="froukje" class="cover" src="./media/images/froukje.png" data-color="darkblue" data-img="froukje.png" data-empty-img="froukjeEmpty.png" data-audio="ikwildansen.mp3" alt="Ik wil dansen - Froukje">
+            <img id="neighbourhood" class="cover" src="./media/images/neighbourhood.png" data-color="brown" data-img="neighbourhood.png" data-empty-img="neighbourhoodEmpty.png" data-audio="reflections.mp3" alt="Reflections - The Neighbourhood">
+            <img id="clairo" class="cover" src="./media/images/clairo.png" data-color="lightyellow" data-img="clairo.png" data-empty-img="clairoEmpty.png" data-audio="bags.mp3" alt="Bags - Clairo">
+            <img id="killers" class="cover" src="./media/images/killers.png" data-color="lightblue" data-img="killers.png" data-empty-img="killersEmpty.png" data-audio="mrbrightside.mp3" alt="Mr. Brightside - The Killers">
+        </div>
+    </div>
+
+    <div class="player">
+        <div id="record" class="record">
+            <div class="label"></div>
+        </div>
+        <div class="tone-arm">
+            <div class="control"></div>
+        </div>
+        <button class="btn"></button>
+        <div class="slider-container">
+            <input
+                type="range"
+                class="slider"
+                min="0"
+                max="1"
+                step="0.1" 
+                value="0.7"
+                />
+        </div>
+    </div>
+    <audio loop class="playing-song" src="./media/audio/scratches.mp3" preload="auto"></audio>
+    <script src="./js/javascript.js"></script>
+</body>
+</html>
